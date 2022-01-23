@@ -4,6 +4,10 @@ import FormData from './components/PostFormData';
 import FormString from './components/PostFormString';
 
 
+function viewFirstLog() {
+  window.location.reload();
+}
+
 function App() {
 
   var [apis, setApis] = useState([]) // global let local
@@ -47,7 +51,12 @@ function App() {
         updateList = {updateList}
       />
 
-      <h3 className="text-prin shadow-sm p-3 mb-5 bg-body rounded">Informações de Logs</h3>
+      <h3 className="text-prin shadow-sm p-3 mb-5 bg-body rounded">
+        Informações de Logs
+      </h3>
+      <button onClick={viewFirstLog} class="btn btn-dark d-flex justify-content-center" type="submit">
+        Clique aqui para ver o primeiro Log
+      </button>
 
       {apis.map(api => (
         <div className="list-apis" key={api.id}> 
