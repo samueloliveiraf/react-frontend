@@ -14,7 +14,7 @@ class FormString extends React.Component {
 
       let searchstring = document.getElementById('string_search').value
   
-      fetch('http://localhost:8000/api/list-logs-api/contains/', {
+      fetch('http://localhost:8000/api/list-logs-apis/contains/', {
         method: 'POST',
         body: JSON.stringify({'string_search': searchstring}),
         headers:{
